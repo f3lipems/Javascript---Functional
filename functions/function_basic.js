@@ -1,5 +1,4 @@
 // Function by param
-
 function goodMorning() {
     console.log('Good Morning!');
 }
@@ -34,7 +33,6 @@ console.log(powerOf4);
 
 
 // Exercice Add
-
 function add(a) {
     return function (b) {
         return function(c) {
@@ -46,8 +44,8 @@ function add(a) {
 addABC = add(1)(2)(3)
 console.log(addABC);
 
-// Exercice Calc
 
+// Exercice Calc
 function calc(x) {
     return function (y) {
         return function fn(fn) {

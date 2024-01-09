@@ -10,6 +10,5 @@ const subInTerminal = (x, y) => console.log(x - y)
 exec(addInTerminal, 56, 38)
 exec(subInTerminal, 182, 27)
 
-
-const logEcec = () => console.log('Exec...');
+const logEcec = () => console.log('Exec...')
 setInterval(logEcec, 1000);
