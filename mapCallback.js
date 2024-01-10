@@ -19,3 +19,16 @@ const getTotal = item => item.qtt * item.price
 
 console.log(cart.map(getItems))
 console.log(cart.map(getTotal))
+
+// My Map
+Array.prototype.myMap = function (fn) {
+    const mappedArray = []
+    for (let i = 0; i < this.length; i++) {
+        mappedArray.push(fn(this[i], i, this))
+    }
+    return mappedArray
+}
+console.log(nums.myMap(double))
+console.log(names.myMap(firstLether))
+console.log(cart.myMap(getItems))
+console.log(cart.myMap(getTotal))
