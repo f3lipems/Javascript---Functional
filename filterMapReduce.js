@@ -22,3 +22,24 @@ const finalAverage = cart
     .avr
 
 console.log(finalAverage)
+
+// My reduce
+Array.prototype.myReduce = function (fn, initial) {
+    let acc = initial
+    for (let i = 0; i < this.length; i++) {
+        if (!acc && i === 0) {
+            acc = this[i]
+        } else {
+            acc = fn(acc, this[i], i, this)
+        }
+    }
+    return acc
+}
+
+const finalAverage2 = cart
+    .filter(isFragile)
+    .map(totalValues)
+    .myReduce(totalAverage, initialValue)
+    .avr
+
+console.log(finalAverage2)
