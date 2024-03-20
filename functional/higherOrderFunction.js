@@ -22,7 +22,7 @@ const r2 = execute(multiply, 7, 9)
 console.log(r1, r2)
 
 const r3 = executeTwo(add, 3, 4, 5)('The add result is:')
-const r4 = executeTwo(multiply, 7, 9)('The mulpiply result is:')
+const r4 = executeTwo(multiply, 7, 9)('The multiply result is:')
 
 console.log(r3)
 console.log(r4)

@@ -1,4 +1,4 @@
-// Inpure Function -- PI is an sternal variable
+// Inpure Function -- PI is an external variable
 function circleArea(radius) {
     return radius * radius * Math.PI // Stabel
 }
