@@ -5,9 +5,9 @@ function createPipeableOperator(operatorFn) {
         return new Observable(subscriber => {
             const newSub = operatorFn(subscriber)
             source.subscribe({
-                next: newSub.next || (n => console.log(n)),
-                error: newSub.error || (e => console.log(e)),
-                complete: newSub.complete || subscriber.complete(),
+                next: newSub.next,
+                error: newSub.error || (e => subscriber.error(e)),
+                complete: newSub.complete || (e => subscriber.complete(e)),
             })
         })
     }
